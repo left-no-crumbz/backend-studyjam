@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="content">
+        <h2>What do you want to ask?</h2>
+
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+    
+            {{ form.username.label }} <br> <br>
+            {{ form.username(size=32, class_="input") }}<br>
+    
+            {% for error in form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+            
+            
+            <br>
+            {{ form.question.label }} <br> <br>
+            {{ form.question(size=100, class_="input")}} <br> <br>
+            {{ form.submit(class_="submit-btn") }}
+        </form>
+        
+        <div class="post-container flex align-center justify-center">
+            <div class="posts">
+                {% for query in queries %}
+                <p> <b>{{ query.username }}</b> asks: {{ query.question }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock%}
