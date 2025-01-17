@@ -1,0 +1,56 @@
+:root {
+    --bg-clr: #111827;
+    --secondary-clr: #1F2937;
+    --tertiary-clr: #E3B261;
+}
+body {
+    background-color: var(--bg-clr);
+    color: white;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+#title, hr {
+    border-color: var(--tertiary-clr);
+    color: var(--tertiary-clr);
+}
+
+.content {
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+}
+
+.post-container {
+    background-color: var(--secondary-clr);
+    max-width: 70%;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.submit-btn {
+    color: var(--tertiary-clr);
+    background-color: var(--secondary-clr);
+    border: 0;
+    padding: .5rem 2rem;
+    border-radius: 10px;
+}
+
+.input {
+    color: white;
+    border: 0;
+    background-color: var(--secondary-clr);
+    padding: 1rem;
+    border-radius: 10px;
+}
