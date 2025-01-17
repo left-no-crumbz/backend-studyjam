@@ -2,8 +2,9 @@ import os
 
 import sqlalchemy as sa
 from dotenv import load_dotenv
-from extensions import db
 from flask import Flask, redirect, render_template, url_for
+
+from extensions import db
 from forms import QuestionForm
 from models import QuestionModel
 
